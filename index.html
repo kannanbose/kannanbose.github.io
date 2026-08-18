@@ -328,6 +328,41 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
   color:var(--amber);border-color:var(--amber);text-shadow:0 0 14px var(--glow-a);
 }
 
+
+/* ── certifications ── */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(14px,1.8vw,20px);align-items:start}
+.certgrp{padding:26px 24px 28px}
+.certgrp .issuer{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cyan);display:block;margin-bottom:12px;
+}
+.certgrp h3{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.14;margin:0 0 8px;letter-spacing:.008em;text-wrap:balance}
+.certgrp .when2{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);margin:0 0 14px}
+.certgrp ul{list-style:none;margin:0;padding:0}
+.certgrp li{
+  padding:9px 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);
+  line-height:1.5;transition:color .3s,padding-left .3s;
+}
+.certgrp li:hover{color:var(--ink);padding-left:6px}
+.certgrp li b{color:var(--amber);font-weight:600}
+.certgrp.feature{border-color:rgba(255,154,56,.3)}
+.certgrp .cid{
+  display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.03em;
+  color:var(--ink-3);margin-top:4px;word-break:break-all;line-height:1.55;
+}
+.certgrp .verify{
+  display:inline-block;margin-top:12px;font-family:var(--mono);font-size:10px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--cyan);text-decoration:none;
+  border-bottom:1px solid rgba(52,227,198,.35);padding-bottom:2px;
+  transition:color .3s,border-color .3s,text-shadow .3s;
+}
+.certgrp .verify:hover,.certgrp .verify:focus-visible{color:var(--amber);border-color:var(--amber);text-shadow:0 0 14px var(--glow-a)}
+
+/* skill chips reused inside experience cards */
+.chips.sm{margin-top:14px}
+.chips.sm span{font-size:9.5px;padding:4px 8px}
+.job .org em.tenure{font-style:normal;color:var(--ink-3);opacity:.85}
+
 /* ── contact ── */
 .contact-in{text-align:center;max-width:760px;margin:0 auto}
 .contact-in .lede{margin-left:auto;margin-right:auto}
@@ -390,10 +425,10 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
 <nav class="nav" aria-label="Sections">
   <a href="#home" class="on">Home</a>
   <a href="#about">About</a>
-  <a href="#impact">Impact</a>
-  <a href="#work">Initiatives</a>
+  <a href="#impact">Milestones</a>
+  <a href="#experience">Experience</a>
   <a href="#skills">Expertise</a>
-  <a href="#career">Experience</a>
+  <a href="#certifications">Certifications</a>
   <a href="#education">Education</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -407,16 +442,20 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
       <div>
         <p class="hello">Hello, I'm</p>
         <h1><span class="l1">Kannan</span><br><span class="l2">Bose</span></h1>
-        <p class="role">ESG, Sustainability &amp; EHS leadership across <b>28 manufacturing sites</b> — governance built to be audited.</p>
-        <p class="sum">Sixteen years turning regulatory obligation into measurable operating advantage — from hazard assessment on a production line to CSRD-aligned disclosure in front of a board.</p>
+        <p class="role">Corporate Head of EHS &nbsp;|&nbsp; <b>ESG &amp; Sustainability</b> &nbsp;|&nbsp; Driving NetZero, Regulatory Compliance and Impactful CSR Strategies</p>
+        <p class="sum">&ldquo;True sustainability is measured not just by compliance, but by the lasting impact we create on people, planet, and performance.&rdquo;</p>
         <div class="cta">
-          <a class="btn solid" href="#work">
+          <a class="btn solid" href="#experience">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-            View initiatives
+            View experience
           </a>
-          <a class="btn" href="mailto:cosykanna@gmail.com">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14"/><path d="M2 6l10 7 10-7"/></svg>
-            Get in touch
+          <a class="btn" href="Kannan-Bose-CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M4 19h16"/></svg>
+            Download CV
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/kannan-bose-58236b2b" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><path d="M7 10v7M7 7v.01M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>
+            LinkedIn
           </a>
         </div>
       </div>
@@ -431,12 +470,12 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
 <!-- ══════ STAT RAIL ══════ -->
 <div class="rail">
   <div class="rail-grid rv">
-    <div class="st"><b data-to="16" data-suffix="+">0</b><span>Years in<br>EHS &amp; ESG</span></div>
-    <div class="st"><b data-to="28">0</b><span>Manufacturing<br>plants</span></div>
+    <div class="st"><b data-to="15" data-suffix="+">0</b><span>Years in<br>EHS &amp; ESG</span></div>
+    <div class="st"><b data-to="28">0</b><span>Manufacturing<br>sites</span></div>
     <div class="st"><b data-to="18">0</b><span>Warehouses<br>directed</span></div>
-    <div class="st"><b data-to="241" data-suffix="+">0</b><span>Suppliers<br>assessed</span></div>
-    <div class="st"><b data-to="19">0</b><span>Corporate<br>policies</span></div>
-    <div class="st"><b data-to="13">0</b><span>Direct<br>reports</span></div>
+    <div class="st"><b data-to="4">0</b><span>Corporate<br>offices</span></div>
+    <div class="st"><b data-to="70">0</b><span>S&amp;P Global<br>CSA score</span></div>
+    <div class="st"><b data-to="13">0</b><span>EHS professionals<br>led</span></div>
   </div>
 </div>
 
@@ -446,32 +485,31 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
     <p class="eyebrow rv"><b>01</b> About</p>
     <div class="about rv">
       <div>
-        <p class="pull">Sixteen years turning regulatory obligation into <em>measurable operating advantage</em> — on the factory floor and in the boardroom.</p>
+        <p class="pull">I thrive at the intersection of <em>strategy, compliance and impact</em> — turning ESG principles into real-world results.</p>
         <ul class="sectors">
           <li><span>Rigid plastic packaging</span><span>2023 —</span></li>
           <li><span>ESG advisory, global</span><span>2020 – 23</span></li>
           <li><span>Beverages</span><span>2016 – 20</span></li>
           <li><span>Automotive</span><span>2015</span></li>
           <li><span>Cement &amp; building materials</span><span>2012 – 15</span></li>
-          <li><span>Automotive &amp; footwear</span><span>2009 – 12</span></li>
+          <li><span>Automotive</span><span>2010 – 12</span></li>
         </ul>
       </div>
       <div>
-        <p>Kannan Bose directs Environment, Health, Safety and Sustainability across <b>28 manufacturing plants, 18 warehouses and 4 corporate offices</b>, leading a 13-member professional team at a PAG private-equity portfolio company. His work spans the full arc of corporate responsibility — from hazard assessment on a production line to CSRD-aligned disclosure in front of a board.</p>
-        <p>He delivers outcomes that are <b>externally validated rather than self-reported</b>: an S&amp;P Global CSA score of 70, a CDP B rating and an EcoVadis score of 70 — each achieved through evidence-based data governance, multi-site audit assurance and disclosure aligned to GRI, CDP, CSRD, TCFD, SBTi and BRSR.</p>
-        <p>Alongside the environmental mandate he authored and enforced a <b>19-policy corporate ethics and compliance framework</b> — code of conduct, anti-bribery and anti-corruption, AML, anti-discrimination and ethical sourcing — with implementation and monitoring embedded across every operating location, and extended that oversight into the value chain through a 241-supplier due diligence programme.</p>
-        <p>A career built in heavy industry: cement, beverages, automotive, footwear and packaging. The vocabulary is boardroom; the instincts are shop floor.</p>
+        <p>I am currently shaping ESG and EHS initiatives at <b>Manjushree Technopack Limited</b>, a portfolio company of PAG PE, driving sustainable practices across manufacturing sites, warehouses and offices. My work focuses on building frameworks that ensure regulatory adherence, minimise environmental impact and cultivate a culture of safety and responsibility, while designing CSR programmes that genuinely engage communities.</p>
+        <p>Over the course of my journey I have helped organisations implement comprehensive ESG strategies, streamline operations and embed NetZero pathways. I specialise in <b>translating complex sustainability goals into actionable plans</b> that drive measurable outcomes and align business performance with environmental stewardship and social responsibility.</p>
+        <p>My focus is on creating resilient, responsible and forward-thinking organisations that leave a positive mark on both the environment and society — with a proven ability to convert sustainability frameworks into operational excellence.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════ IMPACT ══════ -->
+<!-- ══════ MILESTONES ══════ -->
 <section id="impact">
   <div class="wrap">
-    <p class="eyebrow rv"><b>02</b> Verified impact</p>
-    <h2 class="sec rv">Scores that were <em>awarded</em>, not claimed.</h2>
-    <p class="lede rv">Three independent assessment bodies. Each rating is an externally audited judgement on disclosure quality, climate management and ESG governance.</p>
+    <p class="eyebrow rv"><b>02</b> Sustainability milestones</p>
+    <h2 class="sec rv">Outcomes that were <em>externally rated</em>.</h2>
+    <p class="lede rv">Independent assessment bodies, an industry award, and programmes rolled out across the full operating estate.</p>
     <div class="ratings stg">
 
       <article class="panel rating" tabindex="0">
@@ -485,125 +523,139 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
         <p class="who">CDP — Climate</p>
         <p class="score">B</p>
         <div class="meter" style="--w:66%"><i></i></div>
-        <p class="d">Management band: coordinated action on climate issues, with disclosure verified against CDP's scoring methodology.</p>
+        <p class="d">Management band — coordinated action on climate issues, verified against CDP's scoring methodology.</p>
       </article>
 
       <article class="panel rating" tabindex="0">
         <p class="who">EcoVadis</p>
-        <p class="score">70<i>/100</i></p>
-        <div class="meter" style="--w:70%"><i></i></div>
-        <p class="d">Assessed on environment, labour &amp; human rights, ethics and sustainable procurement across the operating group.</p>
+        <p class="score">57<i>/100</i></p>
+        <div class="meter" style="--w:57%"><i></i></div>
+        <p class="d">Assessed on environment, labour &amp; human rights, ethics and sustainable procurement across the group.</p>
       </article>
 
     </div>
-  </div>
-</section>
 
-<!-- ══════ INITIATIVES ══════ -->
-<section id="work">
-  <div class="wrap">
-    <p class="eyebrow rv"><b>03</b> Signature initiatives</p>
-    <h2 class="sec rv">Six programmes, built to <em>survive an audit</em>.</h2>
-    <p class="lede rv">Each was designed, funded, staffed and operated end to end — not advised on. The figures are the scope actually delivered.</p>
-
-    <div class="cards stg">
+    <div class="cards stg" style="margin-top:clamp(16px,2vw,24px)">
+      <article class="panel card" tabindex="0">
+        <div class="scene" aria-hidden="true">
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M200 40l30 62 68 10-49 48 12 68-61-32-61 32 12-68-49-48 68-10z" stroke-width="2"/>
+            <circle cx="200" cy="150" r="120" stroke-dasharray="4 8" opacity=".4"/>
+            <path d="M150 250h100M160 268h80"/>
+          </svg>
+        </div>
+        <span class="tag">Award · 2018</span>
+        <h3>EHS Award for Best Utilisation of EHS Metrics</h3>
+        <p>Recognised for data-driven EHS performance management using <b>Enablon</b> — the enterprise EHS software platform — turning metrics into measurable operational improvement.</p>
+        <div class="kv"><div><b>2018</b>Awarded</div><div><b>Enablon</b>Platform</div></div>
+      </article>
 
       <article class="panel card" tabindex="0">
         <div class="scene" aria-hidden="true">
           <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="318" cy="66" r="30" stroke-width="2"/>
             <g stroke-width="1.2" opacity=".8"><path d="M318 22v-14M318 124v-14M262 66h-14M388 66h-14M279 27l-10-10M367 115l-10-10M357 27l10-10M269 115l10-10"/></g>
-            <g><path d="M10 258l52-40h74l-52 40z"/><path d="M22 250h56M36 238h56M50 226h56"/>
-               <path d="M104 258l52-40h74l-52 40z"/><path d="M116 250h56M130 238h56M144 226h56"/>
-               <path d="M198 258l52-40h74l-52 40z"/><path d="M210 250h56M224 238h56M238 226h56"/></g>
+            <g><path d="M10 258l52-40h74l-52 40z"/><path d="M22 250h56M36 238h56"/>
+               <path d="M104 258l52-40h74l-52 40z"/><path d="M116 250h56M130 238h56"/>
+               <path d="M198 258l52-40h74l-52 40z"/><path d="M210 250h56M224 238h56"/></g>
             <path d="M18 190C86 190 128 164 176 132 224 100 268 96 330 96" stroke-width="2.2" stroke-dasharray="7 5"/>
           </svg>
         </div>
-        <span class="tag">Decarbonisation</span>
-        <h3>Net Zero roadmap to 2050</h3>
-        <p>Designed and operationalised an SBTi-aligned pathway to carbon neutrality, encompassing a full transition to renewable energy and structural waste reduction across the manufacturing footprint.</p>
-        <div class="kv"><div><b>2050</b>Neutrality</div><div><b>100%</b>Renewable</div><div><b>SBTi</b>Aligned</div></div>
-      </article>
-
-      <article class="panel card" tabindex="0">
-        <div class="scene" aria-hidden="true">
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.2">
-            <g opacity=".55"><path d="M200 150L96 74M200 150L318 82M200 150L60 168M200 150L346 186M200 150L128 254M200 150L288 262M200 150L206 46M200 150L192 272"/></g>
-            <circle cx="200" cy="150" r="26" stroke-width="2.4"/><circle cx="200" cy="150" r="38" stroke-dasharray="3 6"/>
-            <g fill="currentColor" opacity=".7"><circle cx="96" cy="74" r="6"/><circle cx="318" cy="82" r="8"/><circle cx="60" cy="168" r="5"/><circle cx="346" cy="186" r="7"/><circle cx="128" cy="254" r="6"/><circle cx="288" cy="262" r="5"/><circle cx="206" cy="46" r="7"/><circle cx="192" cy="272" r="6"/></g>
-            <g opacity=".3" stroke-dasharray="2 5"><circle cx="200" cy="150" r="88"/><circle cx="200" cy="150" r="128"/></g>
-          </svg>
-        </div>
-        <span class="tag">Responsible sourcing</span>
-        <h3>Supplier ESG assessment programme</h3>
-        <p>Built and ran the EcoVadis supplier assessment engine, scoring the vendor base on environmental performance, labour and human rights, ethics and sustainable procurement — then feeding results back into sourcing decisions.</p>
-        <div class="kv"><div><b>241+</b>Suppliers</div><div><b>4</b>Pillars scored</div></div>
-      </article>
-
-      <article class="panel card" tabindex="0">
-        <div class="scene" aria-hidden="true">
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.4">
-            <path d="M200 26l104 40v78c0 60-46 104-104 124-58-20-104-64-104-124V66z" stroke-width="2.2"/>
-            <path d="M200 58l74 29v58c0 44-33 76-74 91-41-15-74-47-74-91V87z" stroke-dasharray="4 6" opacity=".7"/>
-            <path d="M164 152l26 26 50-56" stroke-width="2.6"/>
-            <g opacity=".45"><path d="M20 60h58M20 84h44M20 108h58M20 132h36"/><path d="M322 168h58M336 192h44M322 216h58M344 240h36"/></g>
-          </svg>
-        </div>
-        <span class="tag">Ethics &amp; compliance</span>
-        <h3>Corporate ethics &amp; compliance framework</h3>
-        <p>Framed and executed a 19-policy governance architecture — code of conduct, anti-bribery and anti-corruption, AML, anti-discrimination, ethical sourcing — then led implementation, monitoring and training across every operating location.</p>
-        <div class="kv"><div><b>19</b>Policies</div><div><b>All</b>Sites monitored</div></div>
-      </article>
-
-      <article class="panel card" tabindex="0">
-        <div class="scene" aria-hidden="true">
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M200 44a106 106 0 0 1 92 53" stroke-width="2.4"/><path d="M276 92l18 10 4-22" stroke-width="2.4"/>
-            <path d="M292 203a106 106 0 0 1-184 0" stroke-width="2.4"/><path d="M126 210l-18-10-4 22" stroke-width="2.4"/>
-            <path d="M108 97a106 106 0 0 1 40-40" stroke-width="2.4"/>
-            <g opacity=".85"><path d="M186 108h28v14l10 16v58h-48v-58l10-16z" stroke-width="1.8"/><path d="M190 100h20v8h-20z"/><path d="M176 168h48"/></g>
-            <g opacity=".3" stroke-dasharray="3 5"><circle cx="200" cy="150" r="132"/></g>
-          </svg>
-        </div>
-        <span class="tag">Circular economy</span>
-        <h3>EPR &amp; packaging compliance</h3>
-        <p>Oversees Extended Producer Responsibility obligations under India's Plastic Waste Management Rules — registration, periodic returns, recycler and PRO engagement, and the compliance documentation trail behind them.</p>
-        <div class="kv"><div><b>PWM</b>Rules regime</div><div><b>PRO</b>Network</div></div>
+        <span class="tag">NetZero</span>
+        <h3>The four-zero pathway</h3>
+        <p>NetZero initiatives built around <b>Zero Carbon, Zero Water, Zero Waste and Zero Social Compliance</b> — a framework carried from client advisory into corporate implementation.</p>
+        <div class="kv"><div><b>4</b>Zero pillars</div><div><b>SBTi</b>Aligned</div></div>
       </article>
 
       <article class="panel card" tabindex="0">
         <div class="scene" aria-hidden="true">
           <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.3">
-            <g><rect x="40" y="196" width="56" height="76"/><rect x="52" y="212" width="12" height="12"/><rect x="72" y="212" width="12" height="12"/><rect x="52" y="236" width="12" height="12"/><rect x="72" y="236" width="12" height="12"/>
-               <rect x="112" y="164" width="70" height="108"/><rect x="126" y="182" width="14" height="14"/><rect x="152" y="182" width="14" height="14"/><rect x="126" y="210" width="14" height="14"/><rect x="152" y="210" width="14" height="14"/><rect x="126" y="238" width="14" height="14"/><rect x="152" y="238" width="14" height="14"/>
-               <rect x="198" y="212" width="52" height="60"/><rect x="210" y="228" width="12" height="12"/><rect x="228" y="228" width="12" height="12"/>
-               <path d="M272 272v-96l34-26 34 26v96" stroke-width="1.6"/><path d="M290 210h32M290 234h32M290 258h32"/><path d="M20 272h368" stroke-width="1.6"/></g>
-            <g opacity=".5"><path d="M60 196v-38M68 158h-16M148 164v-46M156 118h-16"/></g>
-            <circle cx="322" cy="70" r="30" stroke-width="2"/><path d="M344 92l30 30" stroke-width="3"/><path d="M310 70h24M322 58v24"/>
+            <g><rect x="40" y="196" width="56" height="76"/><rect x="52" y="212" width="12" height="12"/><rect x="72" y="212" width="12" height="12"/>
+               <rect x="112" y="164" width="70" height="108"/><rect x="126" y="182" width="14" height="14"/><rect x="152" y="182" width="14" height="14"/><rect x="126" y="210" width="14" height="14"/><rect x="152" y="210" width="14" height="14"/>
+               <rect x="198" y="212" width="52" height="60"/><rect x="210" y="228" width="12" height="12"/>
+               <path d="M272 272v-96l34-26 34 26v96"/><path d="M290 210h32M290 234h32"/><path d="M20 272h368" stroke-width="1.6"/></g>
+            <circle cx="322" cy="70" r="30" stroke-width="2"/><path d="M344 92l30 30" stroke-width="3"/>
           </svg>
         </div>
-        <span class="tag">Assurance &amp; audit</span>
-        <h3>Multi-site EHS assurance estate</h3>
-        <p>Directs EHS and Sustainability across the full operating estate, maintaining ISO 14001 and ISO 45001 conformance, managing external certification bodies and surveillance cycles, and running enterprise risk assessment across every location.</p>
-        <div class="kv"><div><b>28</b>Plants</div><div><b>18</b>Warehouses</div><div><b>4</b>Offices</div></div>
+        <span class="tag">Estate scale</span>
+        <h3>ESG rolled out across the full estate</h3>
+        <p>Safe and environmentally responsible operations assured across <b>28 manufacturing sites, 18 warehouses and 4 offices</b>, with ISO 14001 and ISO 45001 conformance maintained throughout.</p>
+        <div class="kv"><div><b>28</b>Sites</div><div><b>18</b>Warehouses</div><div><b>4</b>Offices</div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ EXPERIENCE ══════ -->
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow rv"><b>03</b> Experience</p>
+    <h2 class="sec rv">From safety officer to the boardroom, <em>without leaving the plant</em>.</h2>
+    <p class="lede rv">Fifteen unbroken years in heavy manufacturing — packaging, beverages, cement and automotive — with progressively larger estates and the same discipline throughout.</p>
+
+    <div class="tl stg">
+
+      <article class="job now"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Head of EHS | ESG | CSR | Legal Compliance</h3><span class="when">Jul 2023 — Present</span></div>
+          <p class="org">Manjushree Technopack Limited (MTL) · Portfolio company of PAG PE · Karnataka</p>
+          <p class="d">Driving EHSS operations across India — implementing ESG frameworks, fostering sustainable practices and building a safe, responsible workplace culture. Strengthened regulatory compliance through robust risk assessment programmes, established a high-performance EHS team focused on sustainability objectives, advanced CSR initiatives, and ensured safe, environmentally responsible operations across 28 manufacturing sites, 18 warehouses and 4 offices.</p>
+          <div class="chips sm"><span>EHS Management</span><span>ESG Strategy</span><span>Sustainability</span><span>CSR Initiatives</span><span>Regulatory Compliance</span><span>Risk Assessment</span></div>
+        </div>
       </article>
 
-      <article class="panel card" tabindex="0">
-        <div class="scene" aria-hidden="true">
-          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1.3">
-            <rect x="52" y="44" width="212" height="150" stroke-width="1.9"/>
-            <path d="M52 74h212"/><path d="M52 104h212M52 134h212M52 164h212"/><path d="M110 74v120M180 74v120"/>
-            <g fill="currentColor" opacity=".55"><rect x="64" y="54" width="14" height="10"/><rect x="86" y="54" width="34" height="10"/></g>
-            <g opacity=".8"><path d="M66 118h30M66 148h22M124 118h44M124 148h32M192 118h58M192 148h40"/></g>
-            <path d="M296 96l24-14 24 14v30l-24 14-24-14z" stroke-width="1.8"/><path d="M296 156l24-14 24 14v30l-24 14-24-14z" stroke-width="1.8" opacity=".65"/>
-            <path d="M264 118h32M264 172h32" stroke-dasharray="4 4"/><path d="M158 194v42h176" stroke-dasharray="5 5"/>
-            <circle cx="334" cy="236" r="7" fill="currentColor" opacity=".5"/>
-          </svg>
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>ESG Consultant</h3><span class="when">Oct 2020 — Jun 2023</span></div>
+          <p class="org">Independent practice · Global client portfolio · Bengaluru</p>
+          <p class="d">Provided ESG and sustainability consulting, enabled NetZero pathways and guided corporations with actionable, data-driven sustainability strategies. Delivered accurate, real-time ESG data support to regional teams, developed tailored advisory solutions aligned with client objectives, supported corporations in implementing NetZero initiatives spanning Zero Carbon, Zero Water, Zero Waste and Zero Social Compliance, and conducted ESG benchmarking and industry research to inform strategic decisions.</p>
+          <div class="chips sm"><span>ESG Consulting</span><span>Sustainability Strategy</span><span>NetZero</span><span>ESG Data Management</span><span>Corporate Advisory</span><span>Benchmarking</span></div>
         </div>
-        <span class="tag">Systems</span>
-        <h3>Compliance &amp; ESG digitisation</h3>
-        <p>Digitised Legal Compliance, ESG and EHS management systems, replacing manual registers with tracked, evidence-traceable reporting — the foundation that made the ratings submissions defensible under audit.</p>
-        <div class="kv"><div><b>3</b>Systems</div><div><b>Audit</b>Ready evidence</div></div>
+      </article>
+
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Deputy General Manager — EHS</h3><span class="when">Jun 2019 — Aug 2020</span></div>
+          <p class="org">PepsiCo · Bengaluru <em class="tenure">· 4 yrs 6 mos at PepsiCo</em></p>
+          <p class="d">Ensured environmental and workplace safety compliance, implemented proactive EHS measures and enhanced operational efficiency across the organisation. Streamlined EHS processes to reduce environmental impact, upgraded Environmental Management Systems with the latest technologies, and supported compliance with environmental regulations and standards.</p>
+          <div class="chips sm"><span>Environmental Management</span><span>Risk Mitigation</span><span>EHS Compliance</span><span>Operational Efficiency</span><span>Process Improvement</span></div>
+        </div>
+      </article>
+
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Manager — HSE</h3><span class="when">Mar 2016 — May 2019</span></div>
+          <p class="org">PepsiCo · Bengaluru</p>
+          <p class="d">Implemented comprehensive HSE programmes, ensured regulatory compliance and cultivated a safe, environmentally responsible workplace. Enhanced workplace safety through innovative HSE programmes, improved employee knowledge with comprehensive training initiatives, and conducted audits and inspections resolving identified HSE issues effectively.</p>
+          <div class="chips sm"><span>HSE Programs</span><span>Workplace Safety</span><span>Environmental Compliance</span><span>Auditing</span><span>Training &amp; Development</span><span>Risk Management</span></div>
+        </div>
+      </article>
+
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Deputy Manager — EHS</h3><span class="when">Aug 2015 — Dec 2015</span></div>
+          <p class="org">IFB Automotive Pvt Ltd · Bengaluru</p>
+          <p class="d">Developed and executed occupational health and safety initiatives ensuring compliance with regulations and fostering a safe work environment. Implemented effective OHS programmes improving workplace safety and delivered training to enhance employee awareness of safety practices.</p>
+          <div class="chips sm"><span>OHS Programs</span><span>Safety Compliance</span><span>Risk Assessment</span><span>Workplace Safety</span><span>Process Improvement</span></div>
+        </div>
+      </article>
+
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Deputy Manager — Safety &amp; Environment</h3><span class="when">2012 — Jun 2015</span></div>
+          <p class="org">Zuari Cement Ltd. · Cement &amp; building materials <em class="tenure">· promoted from Assistant Manager — Safety &amp; Environment</em></p>
+          <p class="d">Implemented and monitored health, safety and environmental programmes, ensuring regulatory compliance and promoting a culture of zero accidents. Strengthened risk management systems and enforced safety protocols, achieved improved workplace safety through <b>work permit systems and hot work / LOTO procedures</b>, and facilitated training on work at height, LOTO and <b>confined space entry</b> — minimising incidents in support of zero-accident objectives.</p>
+          <div class="chips sm"><span>H&amp;S Management</span><span>Risk Assessment</span><span>LOTO</span><span>Confined Space Safety</span><span>Work Permit Systems</span><span>Safety Management Systems</span></div>
+        </div>
+      </article>
+
+      <article class="job"><span class="dot"></span>
+        <div class="panel job-in" tabindex="0">
+          <div class="job-head"><h3>Safety Officer</h3><span class="when">Nov 2010 — May 2012</span></div>
+          <p class="org">Hindustan Motors Ltd. — Mitsubishi Division · Automotive · Tiruvallur</p>
+          <p class="d">Maintained safety protocols, conducted risk assessments and promoted a strong culture of safety awareness across the organisation. Enhanced safety outcomes by investigating incidents and implementing corrective actions, and improved employee knowledge through targeted safety training programmes.</p>
+          <div class="chips sm"><span>Safety Management</span><span>Risk Assessment</span><span>Incident Investigation</span><span>Training</span><span>Compliance</span></div>
+        </div>
       </article>
 
     </div>
@@ -618,108 +670,87 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
     <div class="skills stg">
 
       <article class="panel skill" tabindex="0">
-        <h3><i>A</i> Ethics, compliance &amp; governance</h3>
-        <p>The CECO remit — policy architecture, monitoring and value-chain oversight.</p>
-        <div class="chips"><span>Code of Conduct</span><span>Anti-Bribery &amp; Anti-Corruption</span><span>AML</span><span>Anti-Discrimination</span><span>Policy Lifecycle Governance</span><span>Compliance Monitoring</span><span>Third-Party Due Diligence</span><span>Corporate Governance</span><span>Board Reporting</span></div>
-      </article>
-
-      <article class="panel skill" tabindex="0">
-        <h3><i>B</i> ESG strategy &amp; disclosure</h3>
+        <h3><i>A</i> ESG strategy &amp; disclosure</h3>
         <p>Framework-aligned reporting that stands up to external assurance.</p>
-        <div class="chips"><span>GRI Standards</span><span>CDP</span><span>CSRD</span><span>TCFD</span><span>SBTi</span><span>BRSR</span><span>S&amp;P Global CSA</span><span>EcoVadis</span><span>Materiality</span><span>Net Zero Roadmapping</span><span>SDG Integration</span></div>
+        <div class="chips"><span>ESG Strategy</span><span>GRI Standards</span><span>TCFD Framework</span><span>CDP Reporting</span><span>CSRD Compliance</span><span>Sustainability Reporting</span><span>ESG Data Management</span><span>Sustainability Framework Development</span></div>
       </article>
 
       <article class="panel skill" tabindex="0">
-        <h3><i>C</i> Assurance, audit &amp; risk</h3>
-        <p>Programme design, verification logic and auditor management at estate scale.</p>
-        <div class="chips"><span>Multi-Site Audit Design</span><span>Site Tiering &amp; Scoring</span><span>Evidence-Based Verification</span><span>Data Quality Assurance</span><span>External Auditor Management</span><span>Risk-Based Planning</span><span>Internal Controls &amp; SOPs</span><span>CAPA</span></div>
+        <h3><i>B</i> EHS management</h3>
+        <p>The operational core — fifteen years of it, across four heavy industries.</p>
+        <div class="chips"><span>EHS Management</span><span>ISO 14001</span><span>ISO 45001</span><span>Environmental Risk Assessment</span><span>Incident Investigation</span><span>LOTO</span><span>Confined Space Safety</span><span>Work Permit Systems</span><span>Workplace Safety</span></div>
       </article>
 
       <article class="panel skill" tabindex="0">
-        <h3><i>D</i> EPR &amp; circular economy</h3>
-        <p>Producer-side packaging compliance and material circularity.</p>
-        <div class="chips"><span>Extended Producer Responsibility</span><span>Plastic Waste Management Rules</span><span>PRO Management</span><span>Recycler Networks</span><span>Recycled Content</span><span>Waste Diversion</span><span>Regulatory Horizon Scanning</span></div>
+        <h3><i>C</i> NetZero &amp; decarbonisation</h3>
+        <p>Pathways built to be implemented, not just published.</p>
+        <div class="chips"><span>NetZero Implementation</span><span>Zero Carbon</span><span>Zero Water</span><span>Zero Waste</span><span>Circular Economy</span><span>Renewable Energy Transition</span><span>SBTi Alignment</span></div>
       </article>
 
       <article class="panel skill" tabindex="0">
-        <h3><i>E</i> EHS management</h3>
-        <p>The operational core — sixteen years of it, across five heavy industries.</p>
-        <div class="chips"><span>ISO 14001</span><span>ISO 45001</span><span>Environmental Management Systems</span><span>Occupational Health &amp; Safety</span><span>HIRA</span><span>Incident Investigation</span><span>Statutory Compliance</span><span>Industrial Safety Engineering</span><span>Safety Culture</span></div>
+        <h3><i>D</i> Compliance &amp; governance</h3>
+        <p>Regulatory adherence, legal compliance and corporate governance.</p>
+        <div class="chips"><span>Regulatory Compliance</span><span>Legal Compliance</span><span>Corporate Governance</span><span>Code of Conduct</span><span>Anti-Bribery &amp; Anti-Corruption</span><span>Compliance Monitoring</span><span>Audit &amp; Assurance</span></div>
       </article>
 
       <article class="panel skill" tabindex="0">
-        <h3><i>F</i> Data, systems &amp; leadership</h3>
-        <p>Digitised evidence trails and cross-functional delivery without direct authority.</p>
-        <div class="chips"><span>EHS/ESG Digitisation</span><span>Compliance Data Governance</span><span>KPI Design</span><span>ESG Data Analysis</span><span>Benchmarking</span><span>Programme Management</span><span>Influence Without Authority</span><span>Team Leadership</span></div>
+        <h3><i>E</i> Operational excellence</h3>
+        <p>Lean and Six Sigma discipline applied to safety and sustainability systems.</p>
+        <div class="chips"><span>Six Sigma Green Belt</span><span>Lean Six Sigma</span><span>Operational Excellence</span><span>Process Improvement</span><span>Change Management</span><span>Project Management</span><span>Analytical Problem Solving</span></div>
+      </article>
+
+      <article class="panel skill" tabindex="0">
+        <h3><i>F</i> Leadership &amp; engagement</h3>
+        <p>Cross-functional delivery and community-facing programmes.</p>
+        <div class="chips"><span>Strategic Vision</span><span>Stakeholder Engagement</span><span>Team Leadership</span><span>Communication Acumen</span><span>CSR Program Development</span><span>Training &amp; Development</span><span>Cross-Functional Collaboration</span><span>Adaptability</span></div>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- ══════ EXPERIENCE ══════ -->
-<section id="career">
+<!-- ══════ CERTIFICATIONS ══════ -->
+<section id="certifications">
   <div class="wrap">
-    <p class="eyebrow rv"><b>05</b> Experience</p>
-    <h2 class="sec rv">From safety officer to the boardroom, <em>without leaving the plant</em>.</h2>
-    <p class="lede rv">Sixteen unbroken years in heavy manufacturing — five sectors, progressively larger estates, the same discipline throughout.</p>
+    <p class="eyebrow rv"><b>05</b> Licences &amp; certifications</p>
+    <h2 class="sec rv">Credentials, <em>most recent first</em>.</h2>
+    <div class="certs stg">
 
-    <div class="tl stg">
-
-      <article class="job now"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Corporate Head of EHS, ESG &amp; Sustainability</h3><span class="when">Jul 2023 — Present</span></div>
-          <p class="org">Alternicq Limited (formerly Manjushree Technopack) · A PAG portfolio company · Bangalore</p>
-          <p class="d">Directs EHS and Sustainability across 28 plants, 18 warehouses and 4 corporate offices with 13 direct reports. Owns enterprise ESG strategy, the corporate ethics and compliance programme, the Net Zero roadmap, supplier due diligence and EPR obligations — and reports on all of it at board level.</p>
-        </div>
+      <article class="panel certgrp feature" tabindex="0">
+        <span class="issuer">Hero Vired · Virtual Education</span>
+        <h3>Certificate Program in Generative AI for Modern Leaders</h3>
+        <p class="when2">Certificate of Completion · Mar 2026 – May 2026</p>
+        <span class="cid">Credential ID b3d85250-582e-4d31-856f-2ce2553c11eb</span>
+        <a class="verify" href="https://herovired.verification.givemycertificate.com/v/b3d85250-582e-4d31-856f-2ce2553c11eb" target="_blank" rel="noopener noreferrer">Verify credential &#8599;</a>
       </article>
 
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>ESG &amp; Sustainability Consultant</h3><span class="when">Oct 2020 — Jul 2023</span></div>
-          <p class="org">Independent practice · Global client portfolio · Bangalore</p>
-          <p class="d">Advised clients across sectors and geographies on Net Zero strategy, ESG data management and sustainability frameworks. Delivered CDP disclosures, EcoVadis scoring and regulatory documentation, built real-time ESG data models, and guided regional teams on reporting quality.</p>
-        </div>
+      <article class="panel certgrp" tabindex="0">
+        <span class="issuer">Global Reporting Initiative (GRI)</span>
+        <h3>Sustainability reporting programme</h3>
+        <p class="when2">Issued Aug 2021</p>
+        <ul>
+          <li>Introduction to Sustainability Reporting and the GRI Standards</li>
+          <li>Sustainability Reporting Process</li>
+          <li>Integrating the SDGs into Sustainability Reporting</li>
+          <li>Stakeholder Engagement</li>
+          <li>Materiality</li>
+          <li>Introduction to Environment, Social &amp; Governance (ESG)</li>
+          <li>Introduction to Sustainable Finance</li>
+        </ul>
       </article>
 
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Deputy General Manager — EHS</h3><span class="when">Mar 2016 — Oct 2020</span></div>
-          <p class="org">PepsiCo India Holdings / Varun Beverages Limited · Bangalore</p>
-          <p class="d">Managed plant EHS, identified environmental risks and streamlined processes for resource efficiency. Led HSE programmes, audits, inspections and risk assessments, trained employees on HSE procedures, and aligned HSE management systems to organisational and sustainability targets.</p>
-        </div>
-      </article>
-
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Deputy Manager — Occupational Health &amp; Safety</h3><span class="when">Aug 2015 — Dec 2015</span></div>
-          <p class="org">IFB Automotive Pvt Ltd · Bangalore</p>
-          <p class="d">Ran OHS programmes to company and regulatory standard, conducted audits and inspections identifying hazards, and delivered employee training to build a proactive safety culture.</p>
-        </div>
-      </article>
-
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Deputy Manager — Health &amp; Safety</h3><span class="when">Jun 2012 — Jun 2015</span></div>
-          <p class="org">Zuari Cement Limited · Cement &amp; building materials · Chennai</p>
-          <p class="d">Developed and implemented H&amp;S programmes to organisational and industry standard, ran risk assessments and audits with timely corrective action, and raised workforce H&amp;S awareness through structured training and engagement.</p>
-        </div>
-      </article>
-
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Safety Officer</h3><span class="when">Nov 2010 — May 2012</span></div>
-          <p class="org">Hindustan Motors Limited · Automotive · Tiruvallur</p>
-          <p class="d">Site-level occupational safety, statutory compliance and hazard control across automotive production operations.</p>
-        </div>
-      </article>
-
-      <article class="job"><span class="dot"></span>
-        <div class="panel job-in" tabindex="0">
-          <div class="job-head"><h3>Safety Officer</h3><span class="when">Nov 2009 — Oct 2010</span></div>
-          <p class="org">Lotus Footwear Enterprises · Export-oriented unit · Cheyyar</p>
-          <p class="d">Occupational safety, inspection and workforce safety training across high-volume production — the operational grounding underpinning everything that followed.</p>
-        </div>
+      <article class="panel certgrp" tabindex="0">
+        <span class="issuer">LinkedIn Learning</span>
+        <h3>Operational excellence &amp; leadership</h3>
+        <p class="when2">Issued Nov – Dec 2019</p>
+        <ul>
+          <li><b>Six Sigma: Green Belt</b></li>
+          <li><b>Lean Six Sigma Foundations</b></li>
+          <li>Operational Excellence Foundations</li>
+          <li>Leading with Values</li>
+          <li>Learning Design for Sustainability</li>
+          <li>Learning Personal Branding</li>
+        </ul>
       </article>
 
     </div>
@@ -729,38 +760,22 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
 <!-- ══════ EDUCATION ══════ -->
 <section id="education">
   <div class="wrap">
-    <p class="eyebrow rv"><b>06</b> Education &amp; credentials</p>
+    <p class="eyebrow rv"><b>06</b> Education</p>
     <h2 class="sec rv"><em>Engineering</em> underneath the strategy.</h2>
     <div class="creds stg">
 
       <article class="panel cred" tabindex="0">
-        <h3>Education</h3>
+        <h3>Anna University</h3>
         <ul>
-          <li><b>M.E. — Industrial Safety Engineering</b><em>K.S.R. College of Technology, Anna University · 2009</em></li>
-          <li><b>B.Tech — Industrial Biotechnology</b><em>K.S.R. College of Technology · 2007</em></li>
-          <li><b>Diploma — Chemical Technology</b><em>CIT Sandwich Polytechnic, Tamil Nadu · 2003</em></li>
+          <li><b>M.Eng — Industrial Safety Technology</b><em>Master of Engineering · Aug 2007 – May 2009</em></li>
+          <li><b>B.E — Industrial Bio-Technology</b><em>Bachelor of Engineering · Jul 2004 – Apr 2007</em></li>
         </ul>
       </article>
 
       <article class="panel cred" tabindex="0">
-        <h3>Certifications</h3>
+        <h3>CIT Sandwich Polytechnic</h3>
         <ul>
-          <li class="feat">
-            <b>Certificate Program in Generative AI for Modern Leaders</b>
-            <em>Hero Vired (Virtual Education) · Mar – May 2026</em>
-            <span class="cid">ID b3d85250-582e-4d31-856f-2ce2553c11eb</span>
-            <a class="verify" href="https://herovired.verification.givemycertificate.com/v/b3d85250-582e-4d31-856f-2ce2553c11eb" target="_blank" rel="noopener noreferrer">Verify credential &#8599;</a>
-          </li>
-        </ul>
-        <h3 style="margin-top:24px">GRI Academy programme</h3>
-        <ul>
-          <li>Introduction to Sustainability Reporting &amp; the GRI Standards</li>
-          <li>Sustainability Reporting Process</li>
-          <li>Stakeholder Engagement</li>
-          <li>Materiality</li>
-          <li>Integrating the SDGs into Sustainability Reporting</li>
-          <li>Introduction to ESG</li>
-          <li>Introduction to Sustainable Finance</li>
+          <li><b>Diploma — Chemical Technology</b><em>State Technical Board of Tamil Nadu · Aug 2001 – Apr 2003</em></li>
         </ul>
       </article>
 
@@ -768,9 +783,8 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
         <h3>Frameworks in practice</h3>
         <ul>
           <li><b>Disclosure</b><em>GRI · CDP · CSRD · TCFD · BRSR</em></li>
-          <li><b>Targets &amp; ratings</b><em>SBTi · S&amp;P Global CSA · EcoVadis</em></li>
-          <li><b>Management systems</b><em>ISO 14001 · ISO 45001</em></li>
-          <li><b>Product compliance</b><em>EPR · Plastic Waste Management Rules</em></li>
+          <li><b>Ratings</b><em>S&amp;P Global CSA · EcoVadis</em></li>
+          <li><b>Systems</b><em>ISO 14001 · ISO 45001 · Enablon</em></li>
         </ul>
       </article>
 
@@ -794,7 +808,7 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
     <div class="contact-in">
       <p class="eyebrow rv" style="justify-content:center"><b>07</b> Contact</p>
       <h2 class="sec rv">Open to <em>senior mandates</em>.</h2>
-      <p class="lede rv">Chief Ethics &amp; Compliance Officer, Head of ESG &amp; Sustainability, or group-level EHS assurance. Bangalore-based, open to Mumbai, pan-India and global travel.</p>
+      <p class="lede rv">Corporate Head of EHS, Head of ESG &amp; Sustainability, Chief Ethics &amp; Compliance Officer, or group-level EHS assurance. Bengaluru-based, open to pan-India and global travel.</p>
       <div class="cta rv">
         <a class="btn solid" href="mailto:cosykanna@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14"/><path d="M2 6l10 7 10-7"/></svg>
@@ -808,16 +822,21 @@ h1 .l2{color:var(--amber);text-shadow:0 0 44px var(--glow-a), 0 0 90px rgba(255,
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><path d="M7 10v7M7 7v.01M11.5 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>
           LinkedIn
         </a>
+        <a class="btn" href="Kannan-Bose-CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M4 19h16"/></svg>
+          Download CV
+        </a>
       </div>
       <div class="foot">
-        <span>Kannan Bose · Professional dossier</span>
-        <span>ESG · Sustainability · EHS · Ethics &amp; Compliance</span>
+        <span>Kannan Bose · Bengaluru, Karnataka, India</span>
+        <span>ESG · Sustainability · EHS · CSR · Legal Compliance</span>
       </div>
     </div>
   </div>
 </section>
 
 </main>
+
 
 <script>
 (function(){
